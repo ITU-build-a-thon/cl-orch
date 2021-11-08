@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+  - name: Output the model URI to json 
+    copy: 
+      dest: /home/ubuntu/intent/basic_three_node/result/model_api.json
+      content: "{'output_model_URI': '{{link_for_download_2}}'}"
+
+
